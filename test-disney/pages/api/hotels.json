@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Hotel Simba",
+        "description": "L'hotel préféré des lions de la savane",
+        "image": "/leRoiLion.png",
+        "imageAlt": "simba"
+    },
+    {
+        "id": 2,
+        "name": "Hotel Aladdin",
+        "description": "Un hotel de génie",
+        "image": "/aladdin.png",
+        "imageAlt": "aladin"
+    },
+    {
+        "id": 3,
+        "name": "Hotel Ariel",
+        "description": "L'atlantide en mieux",
+        "image": "laPetiteSirene.png",
+        "imageAlt": "ariel"
+    } 
+]
