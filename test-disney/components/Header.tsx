@@ -12,6 +12,9 @@ function Header() {
                         <div className="flex  items-center ">
                             <a href="#" className='content-center' > <Image alt='logo' src={ logo} width={150} height={50} /> </a>
                         </div>
+                        <div className="w-full bg-gray-200 h-1 mb-6">
+                            <div className="bg-blue-400 h-1" style= {{ width: '20%' }}></div>
+                        </div>
                     </div>
                 </nav>
             </div>
