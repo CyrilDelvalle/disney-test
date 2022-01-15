@@ -1,42 +1,10 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import hotels from '../pages/api/hotels.json'
+import hostels from '../api/hotels.json'
 import HotelItem  from './HotelItem'
-
-export interface Hostel {
-  id: number,
-  name: string,
-  description: string,
-  image: string,
-  imageAlt: string
-}
-
-
-
-// isSelected={currentBook.tome === book.tome ? true : false}
-// book={book}
-// onSetCurrentBook={onSetCurrentBook}
-// handleAddBook={handleAddBook}
-// handleRemoveBook={handleRemoveBook}
+import Hostel from '../interfaces/Hostel'
 
 function ListHotel() {
-  const [hostels, setHostels] = useState(hotels)
-
-  const handleAddHostel = (id: number) => {
-    if(hostels.find( hostel => hostel.id === id )){
-      setHostels(hostels.filter(hostel => hostel.id !== id))
-    } else {}
-    
-  };
-  const handleRemoveHostel = (hostel: any) => {
-    setHostels(
-      hostels.map((item: Hostel) =>
-        item.id === hostel.id
-          ? { ...item, currentSelected: hostel.currentSelected - 1 }
-          : item
-      )
-    );
-  };
 
   return (
     <div className="bg-gray-100">
@@ -48,8 +16,7 @@ function ListHotel() {
             {hostels.map((hostel: Hostel ) => (
               <HotelItem 
               key={hostel.id}
-              hostel={hostel} 
-              handleAddHostel= {handleAddHostel}
+              hostel={hostel}
               />
             ))}
           </div>

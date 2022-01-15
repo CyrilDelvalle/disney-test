@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "title": "Concert à Billy Bob's",
+        "description": "Retrouvez chaque soir des concerts live pop-rock, blues, country, salsa…",
+        "schedule" : "14:00 16:00",
+        "image": "/billyBobShow.png",
+        "imageAlt": "billybob"
+    },
+    {
+        "id": 2,
+        "title": "Le Roi Lion et les Rythmes de la Terre",
+        "description": "Revivez l’enchantement musical de ce Classique d'animation Disney.",
+        "schedule" : "22:00 23:30",
+        "image": "/roiLionShow.png",
+        "imageAlt": "lionKing"
+    },
+    {
+        "id": 3,
+        "title": "Disney Illuminations",
+        "description": "Le spectacle nocturne Disney Illuminations",
+        "schedule" : "00:00 00:30",
+        "image" : "/fireWorkShow.png",
+        "imageAlt": "firework"
+    },
+    {
+        "id": 4,
+        "title": "Expérience Héroïque",
+        "description": "Les Super Héros sont prêts à tout pour sauver le monde",
+        "schedule" : "15:00 15:30",
+        "image" : "/superHeroShow.png",
+        "imageAlt": "superhero"
+
+    },
+    {
+        "id": 5,
+        "title": "PanoraMagique",
+        "description": "Découvrez de nouvelles sensations grisantes ",
+        "schedule" : "18:00 00:00",
+        "image": "/panoramaShow.png",
+        "imageAlt": "panorama"
+    }
+]
