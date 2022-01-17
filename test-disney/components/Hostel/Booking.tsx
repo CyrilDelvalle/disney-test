@@ -68,7 +68,7 @@ function Booking() {
     >
       <Form onSubmit={handleSubmit(onSubmit)}>
           <div className="shadow overflow-hidden sm:rounded-md">
-               <div className="px-4 py-5 bg-white sm:p-6">
+               <div className="px-4 py-5 bg-white sm:p-6 align-items">
                  <div className="grid grid-cols-6 gap-6">
                    <div className="col-span-3 sm:col-span-3">
                      <label

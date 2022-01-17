@@ -61,9 +61,11 @@ const Resume: NextPage = () => {
         {() => ( 
           <Form>
             <ResumeDate />
-            <div className="grid grid-cols-2 gap-4 mt-4">
-              <UserForm />
-              <Basket />
+            <div className="container mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  gap-4 mt-4">
+                <UserForm />
+                <Basket />
+              </div>
             </div>
           </Form>
           )}
