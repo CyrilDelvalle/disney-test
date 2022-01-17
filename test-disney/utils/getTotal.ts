@@ -15,7 +15,7 @@ const getTotal = (hostels: Hostel[], shows: Show[], startDate: Date, endDate: Da
         showsPrice = shows.reduce((total, item) => item.price + total, 0);
     }
 
-    return nbDays * hostelsPrice * showsPrice
+    return nbDays * (hostelsPrice + showsPrice)
 }
 
 export default getTotal;

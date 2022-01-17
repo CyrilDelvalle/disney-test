@@ -1,5 +1,4 @@
-const getYesterdayDate = () => {
-    const date = new Date();
+const getYesterdayDate = (date: Date) => {
     date.setDate(date.getDate()-1);
 
     return date

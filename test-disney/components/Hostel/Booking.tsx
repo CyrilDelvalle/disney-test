@@ -30,7 +30,7 @@ function Booking() {
   const router = useRouter()
   const validationSchema = object({
     startDate: date()
-    .min(getYesterdayDate(), 'Veuillez sélectionner une date de début valide')
+    .min(getYesterdayDate(new Date()), 'Veuillez sélectionner une date de début valide')
     .required('Veuillez sélectionner une date de début'),
     endDate: date()
     .when(
