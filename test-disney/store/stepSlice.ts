@@ -1,11 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
+import Step from '../interfaces/Step'
 
-interface State {
-  value: number
-}
-
-const initialState: State = {
-  value: 0
+const initialState: Step = {
+  value: 0,
+  title: ""
 }
 
 export const scheduleSlice = createSlice({
@@ -14,9 +12,12 @@ export const scheduleSlice = createSlice({
   reducers: {
     setStep: (state, action) => {
       state.value = action.payload
+    },
+    setDescription: (state, action) => {
+      state.title = action.payload
     }
   }
 })
 
-export const { setStep } = scheduleSlice.actions
+export const { setStep, setDescription } = scheduleSlice.actions
 export default scheduleSlice.reducer

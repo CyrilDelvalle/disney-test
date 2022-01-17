@@ -4,5 +4,6 @@ export default interface Show {
     description: string,
     schedule: string,
     image: string,
-    imageAlt: string
+    imageAlt: string,
+    price: number
   }

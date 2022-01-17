@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import Hostel from '../interfaces/Hostel'
 
-interface HostelState {
+export interface HostelState {
   value: Hostel[]
 }
 

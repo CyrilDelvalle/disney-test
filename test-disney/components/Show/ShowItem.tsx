@@ -1,7 +1,7 @@
 import React from 'react'
-import Show from '../interfaces/Show'
+import Show from '../../interfaces/Show'
 import Image from 'next/image'
-import { add, remove } from '../store/showSlice'
+import { add, remove } from '../../store/showSlice'
 import { useDispatch, useSelector } from 'react-redux';
 
 interface Props {
@@ -10,8 +10,8 @@ interface Props {
   
 function ShowItem({ show }: Props ) {
     const dispatch = useDispatch();
-    const showList = useSelector((state: any) => state.show.value)
-    const { id, title, image, schedule, description, imageAlt } = show;
+    const showList = useSelector((state: {show: {value: Show[]}}) => state.show.value)
+    const { id, title, image, schedule, description, imageAlt, price } = show;
     const isSelected = showList.find((show: Show) => show.id === id)
 
     return (
@@ -33,12 +33,18 @@ function ShowItem({ show }: Props ) {
           </div>
         </td>
         <td className="px-6 py-4 whitespace-nowrap">
-          <div className="text-sm text-gray-900">{description}</div>
+          <div className="text-sm italic text-gray-900">{description}</div>
         </td>
         <td className="px-6 py-4 whitespace-nowrap">
 
         <div className="flex items-center">
-          <div className="text-sm text-gray-900">{schedule}</div>
+          <div className="text-sm font-medium text-gray-900">{schedule}</div>
+        </div>
+        </td>
+        <td className="px-6 py-4 whitespace-nowrap">
+
+        <div className="flex items-center">
+          <div className="text-sm text-gray-900">{ price > 0 ? `${price} €` : 'Gratuit'}</div>
         </div>
         </td>
         <td className="whitespace-nowrap">

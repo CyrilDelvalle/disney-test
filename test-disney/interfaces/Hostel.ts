@@ -3,5 +3,6 @@ export default interface Hostel {
     name: string,
     description: string,
     image: string,
-    imageAlt: string
+    imageAlt: string,
+    price: number
   }

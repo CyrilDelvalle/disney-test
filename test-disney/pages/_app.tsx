@@ -8,10 +8,16 @@ import { Provider } from 'react-redux'
 function MyApp({ Component, pageProps }: AppProps) {
   return <>
     <Provider store={store}>
-    <Header />
-      <Component {...pageProps} />
-    {/* <Footer /> */}
-      </Provider>
+      <div className='min-h-screen flex flex-col'>
+        <Header />
+        <div className='relative flex flex-grow'>
+          <main className='bg-blue-900 flex-1 p-6'>
+            <Component {...pageProps} />
+          </main>
+        </div>
+      {/* <Footer /> */}
+      </div>
+    </Provider>
   </>
 }
 
