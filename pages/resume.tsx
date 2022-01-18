@@ -2,15 +2,13 @@ import { Form, Formik } from 'formik';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { number, object, string } from 'yup';
 import { setDescription, setStep } from "../store/stepSlice";
 import UserForm from '../components/Resume/UserForm';
 import Basket from '../components/Resume/Basket';
 import ResumeDate from '../components/Resume/ResumeDate';
 import Router from 'next/router';
-import Hostel from '../interfaces/Hostel';
-import Show from '../interfaces/Show';
 
 const Resume: NextPage = () => {
     const dispatch = useDispatch();

@@ -18,7 +18,7 @@ function HotelItem({ hostel }: Props  ) {
       <div key={name} className={` group relative border-2 ${ hostelList.find((hostel: Hostel) => hostel.id === id) ? " border-blue-500 rounded" :  null   }` } >
           <div
             className="relative w-full h-80 bg-white overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-            <Image className="w-full h-full object-center object-cover" alt={imageAlt} src={image} width={360} height={300} />
+            <Image className="w-full h-full object-center object-cover" alt={imageAlt} src={image} width={390} height={300} />
           </div>
           <div className='px-2'>
             <h3 className="mt-6 text-sm text-gray-500">
