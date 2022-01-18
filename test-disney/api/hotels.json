@@ -5,7 +5,13 @@
         "description": "L'hotel préféré des lions de la savane.",
         "image": "/leRoiLion.png",
         "imageAlt": "simba",
-        "price": 99
+        "price": 99,
+        "services" : [
+            "Wifi",
+            "Piscine",
+            "Navette",
+            "Parking"
+        ]
     },
     {
         "id": 2,
@@ -13,7 +19,11 @@
         "description": "Un hotel de génie.",
         "image": "/aladdin.png",
         "imageAlt": "aladin",
-        "price": 110
+        "price": 110,
+        "services" : [
+            "Wifi",
+            "Parking"
+        ]
     },
     {
         "id": 3,
@@ -21,7 +31,12 @@
         "description": "L'atlantide en mieux.",
         "image": "/laPetiteSirene.png",
         "imageAlt": "ariel",
-        "price": 120
+        "price": 120,
+        "services" : [
+            "Wifi",
+            "Navette",
+            "Parking"
+        ]
     },
     {
         "id": 4,
@@ -29,7 +44,12 @@
         "description": "Vivez comme un super héros.",
         "image": "/marvel.png",
         "imageAlt": "marvel",
-        "price": 160
+        "price": 160,
+        "services" : [
+            "Wifi",
+            "Piscine",
+            "Navette"
+        ]
     },
     {
         "id": 5,
@@ -37,7 +57,10 @@
         "description": "Pour une ambiance chalêt.",
         "image": "/sequoia.png",
         "imageAlt": "sequoia",
-        "price": 120
+        "price": 120,
+        "services" : [
+            "Wifi"
+        ]
     },
     {
         "id": 6,
@@ -45,6 +68,11 @@
         "description": "Le légendaire hotêl disney.",
         "image": "/cheyenne.png",
         "imageAlt": "cheyenne",
-        "price": 250
+        "price": 250,
+        "services" : [
+            "Wifi",
+            "Parking",
+            "Buffet"
+        ]
     }
 ]

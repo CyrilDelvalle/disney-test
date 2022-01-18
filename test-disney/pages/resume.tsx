@@ -2,16 +2,20 @@ import { Form, Formik } from 'formik';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { number, object, string } from 'yup';
 import { setDescription, setStep } from "../store/stepSlice";
 import UserForm from '../components/Resume/UserForm';
 import Basket from '../components/Resume/Basket';
 import ResumeDate from '../components/Resume/ResumeDate';
 import Router from 'next/router';
+import Hostel from '../interfaces/Hostel';
+import Show from '../interfaces/Show';
 
 const Resume: NextPage = () => {
     const dispatch = useDispatch();
+    const hostelList = useSelector((state: { hostel: {value: Hostel[] }}) => state.hostel.value)
+    const showList = useSelector((state: { show: {value: Show[] }}) => state.show.value)
 
     const validationSchema = object({
       firstName: string().max(50).required('Veuillez entrer un prénom').matches(/^[aA-zZ\s]+$/, "Seul les lettres sont autorisées"),
@@ -54,7 +58,11 @@ const Resume: NextPage = () => {
         <link rel="icon" href="/mickeyLogo.png" />
       </Head>
 
-      <Formik
+
+      {
+        hostelList.length ? 
+
+        <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={() =>handleSubmit()}>
@@ -70,6 +78,10 @@ const Resume: NextPage = () => {
           </Form>
           )}
       </Formik>
+      :
+        <p className='text-center font-bold tracking-tight text-white sm:text-4xl'>Votre panier est vide</p>
+      }
+
     </div>
     
   )

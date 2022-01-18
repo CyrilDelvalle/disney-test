@@ -50,8 +50,9 @@ function ShowsList() {
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {shows.map((show: any ) => (
-                    <ShowItem 
-                    show={show}
+                    <ShowItem
+                    key={show.id} 
+                      show={show}
                     />
                   ))}
                 </tbody>

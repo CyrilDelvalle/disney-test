@@ -68,7 +68,7 @@ function UserForm() {
                             <option value="0">Sélectionnez un pays</option>
                             {
                                 countries.map(({ id, name}: Country ) => {
-                                  return <option value={id}>{name}</option>;
+                                  return <option key={id} value={id}>{name}</option>;
                                 })
                               }
                             </Field>

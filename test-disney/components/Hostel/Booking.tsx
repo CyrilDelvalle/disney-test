@@ -67,10 +67,13 @@ function Booking() {
       onSubmit={() => {}}
     >
       <Form onSubmit={handleSubmit(onSubmit)}>
+      {
+        errorMessage.length > 0 ? <ErrorMessageComponent  message = {errorMessage}/> : null
+      }
           <div className="shadow overflow-hidden sm:rounded-md">
-               <div className="px-4 py-5 bg-white sm:p-6 align-items">
-                 <div className="grid grid-cols-6 gap-6">
-                   <div className="col-span-3 sm:col-span-3">
+               <div className="px-4 py-5 bg-white sm:p-6 align-items ">
+                 <div className="grid grid-cols-6 gap-6 space-x-0  justify-between">
+                   <div className="col-span-2 sm:col-span-2 ">
                      <label
                       htmlFor="last-name"
                       className="block text-sm font-medium text-gray-700"
@@ -84,7 +87,7 @@ function Booking() {
                         <DatePicker
                         locale="fr"
                         dateFormat="dd/MM/yyyy"
-                        className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        className="mt-1 border-2 border-blue-900 focus:ring-blue-700 focus:border-blue-700 block w-full shadow-sm sm:text-sm rounded-md"
                         selected={field.value}
                         name="startDate"
                         onChange={(date: Date) => {
@@ -95,7 +98,7 @@ function Booking() {
                         )}
                     />
                   </div>
-                  <div className="col-span-3 sm:col-span-3">
+                  <div className="col-span-2 sm:col-span-2 ">
                     <label
                       htmlFor="first-name"
                       className="block text-sm font-medium text-gray-700"
@@ -109,7 +112,7 @@ function Booking() {
                         <DatePicker
                         locale="fr"
                         dateFormat="dd/MM/yyyy"
-                        className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        className="mt-1 border-2 border-blue-900 focus:ring-blue-700 focus:border-blue-700 block w-full shadow-sm sm:text-sm rounded-md"
                         selected={  field.value }
                         name="endDate"
                         onChange={(date: Date) => {
@@ -120,21 +123,21 @@ function Booking() {
                       )}
                     />
                   </div>
+                  <div className="col-span-2 sm:col-span-2 text-right mt-3">
+                    <button
+                    type="submit"
+                    className="items-end  inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-900 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    >
+                    Réserver
+                    </button>
+                  </div>
                   <div className="col-span-12 ">
                     <HotelList />
                   </div>
                 </div>
               </div>
               <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                <button
-                  type="submit"
-                  className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-900 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  Réserver
-                </button>
-                {
-                  errorMessage.length > 0 ? <ErrorMessageComponent  message = {errorMessage}/> : null
-                }
+
               </div>
             </div>
       </Form>

@@ -4,5 +4,6 @@ export default interface Hostel {
     description: string,
     image: string,
     imageAlt: string,
-    price: number
+    price: number,
+    services: string[]
   }
