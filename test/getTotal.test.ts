@@ -7,7 +7,8 @@ const mockedHostelList = [
         "description": "L'hotel préféré des lions de la savane.",
         "image": "/leRoiLion.png",
         "imageAlt": "simba",
-        "price": 300
+        "price": 300,
+        "services": [""]
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@ const mockedHostelList = [
         "description": "Un hotel de génie.",
         "image": "/aladdin.png",
         "imageAlt": "aladin",
-        "price": 100
+        "price": 100,
+        "services": [""]
     },
     {
         "id": 3,
@@ -23,7 +25,8 @@ const mockedHostelList = [
         "description": "L'atlantide en mieux.",
         "image": "/laPetiteSirene.png",
         "imageAlt": "ariel",
-        "price": 100
+        "price": 100,
+        "services": [""]
     },
 ];
 
