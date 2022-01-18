@@ -4,8 +4,8 @@ import getDaysBetweenStartDateAndEndDate from "./getDaysBetweenStartDateAndEndDa
 
 const getTotal = (hostels: Hostel[], shows: Show[], startDate: Date, endDate: Date): number => {
     const nbDays = getDaysBetweenStartDateAndEndDate(startDate, endDate);
-    let hostelsPrice = 1;
-    let showsPrice = 1;
+    let hostelsPrice = 0;
+    let showsPrice = 0;
 
     if(hostels.length) {
         hostelsPrice = hostels.reduce((total, item) => item.price + total, 0);

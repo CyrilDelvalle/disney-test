@@ -2,8 +2,14 @@ import { ErrorMessage, Field } from 'formik';
 import React from 'react'
 import Country from '../../interfaces/Country';
 import countries from '../../api/countries.json'
+import Hostel from '../../interfaces/Hostel';
+import { useSelector } from 'react-redux';
+import Show from '../../interfaces/Show';
 
 function UserForm() {
+  const hostelList = useSelector((state: { hostel: {value: Hostel[]}} ) => state.hostel.value)
+  const showList = useSelector((state: { show: {value: Show[] }}) => state.show.value)
+  
     return (
         <div className=" overflow-hidden rounded">
         <div className="px-4 py-5 bg-white sm:p-6">
@@ -11,7 +17,9 @@ function UserForm() {
             <div className=" bg-white">
                   <div className="mt-5 md:mt-0 md:col-span-2">
                       <div className="px-4 py-5 bg-white sm:p-6">
-                        <div className="grid grid-cols-6 gap-6">
+                        {
+                          (hostelList.length && showList.length) ?
+                          <div className="grid grid-cols-6 gap-6">
                           <div className="col-span-6 sm:col-span-3">
                             <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
                               Prénom
@@ -127,12 +135,11 @@ function UserForm() {
                                 className="text-red-400"
                             />
                           </div>
-                        </div>
+                        </div> : <p>Votre panier doit contenir un hotel</p>
+                        }
+
                       </div>    
                 </div>
-
-            </div>
-            <div className="px-4 py-3 text-right sm:px-6">
 
             </div>
 
